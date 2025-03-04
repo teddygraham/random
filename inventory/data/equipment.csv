@@ -1,0 +1,2 @@
+sku,name,description,category,manufacturer,model,serial_number,purchase_date,purchase_price,status,checked_out_by,checkout_date,due_date,location,image_path,created_at,updated_at
+LAB-00001,Condenser Microphone,A USB cardioid condenser microphone,Audio,Audio-Technica ,AT2020USB+,,2019-03-01,150.0,In Stock,,,,EDG RR5 Studio Tall Locker,data/images/LAB-00001_20250304093807.jpg,2025-03-04T09:38:07.806863,2025-03-04T09:38:07.806874

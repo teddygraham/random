@@ -1,0 +1,7 @@
+streamlit
+pandas
+pillow
+pytest
+black
+qrcode
+streamlit-cookies
