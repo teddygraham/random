@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Library</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Personal Library</h1>
+
+  <section id="add-book">
+    <h2>Add Book</h2>
+    <form id="book-form">
+      <input type="text" id="title" placeholder="Title" required>
+      <input type="text" id="author" placeholder="Author" required>
+      <input type="text" id="isbn" placeholder="ISBN">
+      <button type="submit">Add</button>
+    </form>
+  </section>
+
+  <section id="books">
+    <h2>Books</h2>
+    <ul id="book-list"></ul>
+  </section>
+
+  <section id="add-user">
+    <h2>Add User</h2>
+    <form id="user-form">
+      <input type="text" id="user-name" placeholder="Name" required>
+      <input type="email" id="user-email" placeholder="Email">
+      <input type="text" id="user-phone" placeholder="Phone">
+      <button type="submit">Add</button>
+    </form>
+  </section>
+
+  <section id="checkout">
+    <h2>Checkout Book</h2>
+    <form id="checkout-form">
+      <select id="checkout-book"></select>
+      <select id="checkout-user"></select>
+      <input type="date" id="due-date" required>
+      <button type="submit">Checkout</button>
+    </form>
+  </section>
+
+  <section id="loans">
+    <h2>Current Loans</h2>
+    <ul id="loan-list"></ul>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
