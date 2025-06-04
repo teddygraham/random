@@ -1,0 +1,64 @@
+body {
+  font-family: "MS Sans Serif", Tahoma, sans-serif;
+  background-color: #c0c0c0;
+  padding: 20px;
+}
+
+h1, h2 {
+  font-weight: normal;
+  margin: 0 0 8px;
+}
+
+section {
+  margin-bottom: 20px;
+  background: #ffffff;
+  padding: 10px;
+  border: 2px solid #ffffff;
+  border-top-color: #eeeeee;
+  border-left-color: #eeeeee;
+  border-bottom-color: #333333;
+  border-right-color: #333333;
+  box-shadow: inset -1px -1px 0 #000000, inset 1px 1px 0 #ffffff;
+}
+
+form input, form select, button {
+  font-family: "MS Sans Serif", Tahoma, sans-serif;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+input, select {
+  padding: 2px;
+  background: #ffffff;
+  border: 2px solid #ffffff;
+  border-top-color: #ffffff;
+  border-left-color: #ffffff;
+  border-bottom-color: #404040;
+  border-right-color: #404040;
+}
+
+button {
+  padding: 2px 8px;
+  background: #c0c0c0;
+  border: 2px solid #ffffff;
+  border-top-color: #ffffff;
+  border-left-color: #ffffff;
+  border-bottom-color: #404040;
+  border-right-color: #404040;
+}
+
+button:active {
+  border-top-color: #404040;
+  border-left-color: #404040;
+  border-bottom-color: #ffffff;
+  border-right-color: #ffffff;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 4px;
+}
