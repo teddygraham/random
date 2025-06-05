@@ -56,6 +56,25 @@ app.post('/api/users', (req, res) => {
   );
 });
 
+app.get('/api/users/:id', (req, res) => {
+  db.get('SELECT * FROM users WHERE id = ?', [req.params.id], (err, row) => {
+    if (err) return res.status(500).json({ error: err.message });
+    res.json(row || {});
+  });
+});
+
+app.put('/api/users/:id', (req, res) => {
+  const { name, email, phone } = req.body;
+  db.run(
+    'UPDATE users SET name = ?, email = ?, phone = ? WHERE id = ?',
+    [name, email, phone, req.params.id],
+    function(err) {
+      if (err) return res.status(500).json({ error: err.message });
+      res.json({ changes: this.changes });
+    }
+  );
+});
+
 // Checkout
 app.post('/api/checkout', (req, res) => {
   const { book_id, user_id, due_date } = req.body;
