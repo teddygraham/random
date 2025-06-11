@@ -80,6 +80,7 @@ async function populateCheckout() {
   }
 }
 
+
 // Add book
 const bookForm = document.getElementById('book-form');
 if (bookForm) {
@@ -94,8 +95,6 @@ if (bookForm) {
       body: JSON.stringify({ title, author, isbn })
     });
     e.target.reset();
-  });
-}
 
 // Add user
 const userForm = document.getElementById('user-form');
@@ -111,8 +110,6 @@ if (userForm) {
       body: JSON.stringify({ name, email, phone })
     });
     e.target.reset();
-  });
-}
 
 // Edit user
 const editForm = document.getElementById('edit-user-form');
