@@ -2,9 +2,10 @@
 
 A simple web application to manage your personal book collection. Built with Node.js, Express, SQLite and vanilla HTML/CSS/JavaScript.
 
-The UI is styled with a simple Windows 95 look. The app consists of separate pages:
-`add_book.html`, `books.html`, `add_user.html`, `users.html`, `checkout.html` and
-`loans.html`. Use `index.html` as a landing page linking to each section.
+The UI uses a simple Windows 95 look. Navigation is split across three main pages:
+`books.html`, `users.html` and `loans.html` with `index.html` as the landing page.
+Adding books, adding users and checking out books are handled in modal dialogs on
+their respective pages.
 
 ## Features
 

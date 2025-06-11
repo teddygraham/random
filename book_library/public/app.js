@@ -80,6 +80,16 @@ async function populateCheckout() {
   }
 }
 
+function show(id) {
+  const el = document.getElementById(id);
+  if (el) el.classList.remove('hidden');
+}
+
+function hide(id) {
+  const el = document.getElementById(id);
+  if (el) el.classList.add('hidden');
+}
+
 // Add book
 const bookForm = document.getElementById('book-form');
 if (bookForm) {
@@ -94,8 +104,15 @@ if (bookForm) {
       body: JSON.stringify({ title, author, isbn })
     });
     e.target.reset();
+    hide('add-book-modal');
+    renderBooks();
   });
 }
+
+const addBookBtn = document.getElementById('open-add-book');
+const closeBookBtn = document.getElementById('close-add-book');
+if (addBookBtn) addBookBtn.addEventListener('click', () => show('add-book-modal'));
+if (closeBookBtn) closeBookBtn.addEventListener('click', () => hide('add-book-modal'));
 
 // Add user
 const userForm = document.getElementById('user-form');
@@ -111,8 +128,15 @@ if (userForm) {
       body: JSON.stringify({ name, email, phone })
     });
     e.target.reset();
+    hide('add-user-modal');
+    renderUsers();
   });
 }
+
+const addUserBtn = document.getElementById('open-add-user');
+const closeUserBtn = document.getElementById('close-add-user');
+if (addUserBtn) addUserBtn.addEventListener('click', () => show('add-user-modal'));
+if (closeUserBtn) closeUserBtn.addEventListener('click', () => hide('add-user-modal'));
 
 // Edit user
 const editForm = document.getElementById('edit-user-form');
@@ -157,6 +181,14 @@ if (checkoutForm) {
   });
   populateCheckout();
 }
+
+const checkoutBtn = document.getElementById('open-checkout');
+const closeCheckoutBtn = document.getElementById('close-checkout');
+if (checkoutBtn) checkoutBtn.addEventListener('click', () => {
+  populateCheckout();
+  show('checkout-modal');
+});
+if (closeCheckoutBtn) closeCheckoutBtn.addEventListener('click', () => hide('checkout-modal'));
 
 // Initial rendering based on page
 renderBooks();
