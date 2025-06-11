@@ -2,19 +2,12 @@
 
 A simple web application to manage your personal book collection. Built with Node.js, Express, SQLite and vanilla HTML/CSS/JavaScript.
 
-The UI uses a simple Windows 95 look. Navigation links to six pages from
-`index.html`:
-`add_book.html`, `books.html`, `add_user.html`, `users.html`, `checkout.html`
-and `loans.html`. Each page contains its own form or list – no modal dialogs
-are used.
-
 ## Features
 
 - Add and remove books
 - Track users who borrow books
 - Checkout and checkin books with due dates
 - View current loans and overdue books
-- Edit user information
 
 ## Setup
 

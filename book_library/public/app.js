@@ -80,15 +80,6 @@ async function populateCheckout() {
   }
 }
 
-function show(id) {
-  const el = document.getElementById(id);
-  if (el) el.classList.remove('hidden');
-}
-
-function hide(id) {
-  const el = document.getElementById(id);
-  if (el) el.classList.add('hidden');
-}
 
 // Add book
 const bookForm = document.getElementById('book-form');
@@ -104,10 +95,6 @@ if (bookForm) {
       body: JSON.stringify({ title, author, isbn })
     });
     e.target.reset();
-    renderBooks();
-  });
-}
-
 
 // Add user
 const userForm = document.getElementById('user-form');
@@ -123,10 +110,6 @@ if (userForm) {
       body: JSON.stringify({ name, email, phone })
     });
     e.target.reset();
-    renderUsers();
-  });
-}
-
 
 // Edit user
 const editForm = document.getElementById('edit-user-form');
@@ -171,7 +154,6 @@ if (checkoutForm) {
   });
   populateCheckout();
 }
-
 
 // Initial rendering based on page
 renderBooks();
