@@ -8,21 +8,8 @@
 </head>
 <body>
   <h1>Current Loans</h1>
-  <button id="open-checkout">Checkout Book</button>
+  <p><a href="checkout.html">Checkout a book</a></p>
   <ul id="loan-list"></ul>
-
-  <div id="checkout-modal" class="modal hidden">
-    <div class="modal-content">
-      <h2>Checkout Book</h2>
-      <form id="checkout-form">
-        <select id="checkout-book"></select>
-        <select id="checkout-user"></select>
-        <input type="date" id="due-date" required>
-        <button type="submit">Checkout</button>
-        <button type="button" id="close-checkout">Close</button>
-      </form>
-    </div>
-  </div>
   <script src="app.js"></script>
 </body>
 </html>
