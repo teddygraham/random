@@ -8,6 +8,7 @@ A simple web application to manage your personal book collection. Built with Nod
 - Track users who borrow books
 - Checkout and checkin books with due dates
 - View current loans and overdue books
+- Admin login with changeable password
 
 ## Setup
 
@@ -19,7 +20,10 @@ A simple web application to manage your personal book collection. Built with Nod
    ```bash
    npm start
    ```
-3. Open `http://localhost:3000` in your browser.
+3. Open `http://localhost:3000/login.html` in your browser and log in with:
+   - **Username:** `admin`
+   - **Password:** `tempPassword`
+   After logging in you can change the password from the "Change Password" link.
 
 The database is stored in `library.db` in the project directory.
 

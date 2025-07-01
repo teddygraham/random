@@ -160,3 +160,55 @@ renderBooks();
 renderUsers();
 renderLoans();
 populateCheckout();
+
+// Login form
+const loginForm = document.getElementById('login-form');
+if (loginForm) {
+  loginForm.addEventListener('submit', async e => {
+    e.preventDefault();
+    const username = document.getElementById('login-username').value;
+    const password = document.getElementById('login-password').value;
+    const res = await fetch('/api/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ username, password })
+    });
+    if (res.ok) {
+      window.location.href = 'index.html';
+    } else {
+      alert('Invalid credentials');
+    }
+  });
+}
+
+// Change password form
+const changeForm = document.getElementById('change-password-form');
+if (changeForm) {
+  changeForm.addEventListener('submit', async e => {
+    e.preventDefault();
+    const oldPassword = document.getElementById('old-password').value;
+    const newPassword = document.getElementById('new-password').value;
+    const res = await fetch('/api/change-password', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ oldPassword, newPassword })
+    });
+    if (res.ok) {
+      alert('Password changed');
+      changeForm.reset();
+    } else {
+      const data = await res.json();
+      alert(data.error || 'Error');
+    }
+  });
+}
+
+// Logout link
+const logoutLink = document.getElementById('logout-link');
+if (logoutLink) {
+  logoutLink.addEventListener('click', async e => {
+    e.preventDefault();
+    await fetch('/api/logout', { method: 'POST' });
+    window.location.href = 'login.html';
+  });
+}
