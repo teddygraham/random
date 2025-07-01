@@ -19,6 +19,12 @@ const initQueries = [
     email TEXT,
     phone TEXT
   )`,
+  `CREATE TABLE IF NOT EXISTS accounts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    username TEXT UNIQUE,
+    password TEXT,
+    is_admin INTEGER DEFAULT 0
+  )`,
   `CREATE TABLE IF NOT EXISTS loans (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     book_id INTEGER,
